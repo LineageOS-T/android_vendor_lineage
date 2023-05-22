@@ -243,7 +243,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     NetworkStackOverlay \
-    SimpleDeviceConfigOverlay
+    SimpleDeviceConfigOverlay \
+    RoundQSOverlay
 
 # Translations
 CUSTOM_LOCALES += \
