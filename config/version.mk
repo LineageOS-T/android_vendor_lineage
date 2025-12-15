@@ -2,12 +2,7 @@ PRODUCT_VERSION_MAJOR = 20
 PRODUCT_VERSION_MINOR = 0
 DEVICE_MAINTAINER ?= UNKNOWN
 DEVICE_MAINTAINER_LINK ?= UNKNOWN
-
-ifeq ($(LINEAGE_VERSION_APPEND_TIME_OF_DAY),true)
-    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d_%H%M%S)
-else
-    LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d)
-endif
+LINEAGE_BUILD_DATE := $(shell date -u +%Y%m%d_%H%M)
 
 # Set LINEAGE_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
 
