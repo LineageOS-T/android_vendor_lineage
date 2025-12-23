@@ -24,4 +24,7 @@
             5 - Go to assistant (Settings.Secure.ASSISTANT)
     -->
     <integer name="config_longPressOnPowerBehavior">1</integer>
+    
+    <!-- the number of the max cached processes in the system. -->
+    <integer name="config_customizedMaxCachedProcesses">64</integer>
 </resources>
