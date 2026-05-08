@@ -6,9 +6,13 @@ PRODUCT_BRAND ?= LineageOS
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Gapps
+ifeq ($(WITH_GAPPS), true)
 LINEAGE_ZIP_TYPE := CoreGApps
 LINEAGE_CORE := true
 $(call inherit-product, vendor/gms/common/common-vendor.mk)
+else
+LINEAGE_ZIP_TYPE := Vanilla
+endif
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -133,6 +137,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     LineageParts \
     LineageSettingsProvider \
+    LineageSetupWizard \
     Updater
 
 PRODUCT_COPY_FILES += \
